@@ -1,4 +1,7 @@
-<h1>All The Guests</h1>
+<h1>All Guests</h1>
+
+<%= link_to 'View All Epsiodes', episodes_path%><br />
+<%= link_to 'Add an Appearance', new_appearance_path%><br />
 
 <ul>
   <% @guests.each do |guest| %>

@@ -1,0 +1,8 @@
+<h1>Appearance</h1>
+
+<p><%= @appearance.rating%></p>
+<p><%= Guest.find(@appearance.guest_id).name%></p>
+<p><%= Episode.find(@appearance.episode_id).date%></p><br>
+
+<%= link_to 'Edit Appearance', edit_appearance_path(@appearance)%>
+<%= link_to 'View Guest', guest_path(Guest.find(@appearance.guest_id))%>

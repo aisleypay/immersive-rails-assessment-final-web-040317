@@ -2,3 +2,13 @@
 
 <h3><%= @guest.occupation %></h3>
 
+<%= link_to 'Add Appearance', new_appearance_path%>
+
+<h3>Appearances</h3>
+<%= @guest.appearances.each do |appearance|%>
+  <% ep = (Episode.find(appearance.episode_id)).date %>
+  <%= link_to ep, appearance_path %><br>
+<% end %>
+
+
+<br><%= link_to 'View All Guests', guests_path%>
